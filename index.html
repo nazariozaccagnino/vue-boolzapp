@@ -45,11 +45,11 @@
                             placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="conversation debug">
-                        <div class="user d-flex justify-content-between">
+                        <div class="user d-flex justify-content-between py-2 border-top border-bottom" v-for="(item, id) in contacts">
                             <div class="d-flex">                                
-                                    <img src="./img/avatar_2.jpg" alt="">                                
+                                    <img :src="item.avatar" :alt="item.name">                                
                                 <div>
-                                    <div><h6>Michele</h6></div>
+                                    <div><h6>{{item.name}}</h6></div>
                                     <div>Ultimo messaggio inviato</div>                                    
                                 </div>
                             </div>
