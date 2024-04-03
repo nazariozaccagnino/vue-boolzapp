@@ -167,5 +167,6 @@ export const contacts = [
                 status: 'received'
             }
         ],
-    }
+    },
+    
 ]

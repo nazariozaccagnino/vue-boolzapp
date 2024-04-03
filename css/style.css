@@ -40,14 +40,34 @@ i{
     color: #8EDAFC;    
 }
 .searchbar{
-    
+    height:50px;
 }
 .user img{
     width: 10%;
     border-radius: 50%;
 }
+.conversations{
+    overflow-y: scroll;
+    height: calc(100% - 160px);
+}
 .toolbar{
     height: 50px;
     width: 100%;
     background-color: #EAEAEA;
+}
+.chat{
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+}
+.sent{
+    background-color: #e1ffc7;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.received{
+    background-color: white;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
 }
