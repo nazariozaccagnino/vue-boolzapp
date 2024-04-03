@@ -44,7 +44,7 @@
                         <input type="text" class="form-control" id="exampleFormControlInput1"
                             placeholder="Cerca o inizia una nuova chat">
                     </div>
-                    <div class="conversations debug">
+                    <div class="conversations">
                         <div class="user d-flex justify-content-between py-2 border-top border-bottom" v-for="(item, id) in contacts">
                             <div class="d-flex">                                
                                     <img :src="item.avatar" :alt="item.name">                                
@@ -73,19 +73,28 @@
                     </div>
                     <div class="chat">
                         <div class="p-3 d-flex justify-content-end">
-                            <div class="sent d-flex justify-content-between">
+                            <div class="sent d-flex justify-content-between flex-wrap">
                                 <div>messaggio</div>
-                                <div class="d-flex flex-column justify-content-end">orario</div>
+                                <div class="chatclock d-flex flex-column justify-content-end">16.15</div>
                             </div>
                         </div>
                         <div class="p-3 d-flex justify-content-start">
-                            <div class="received">
-                                received
+                            <div class="received d-flex justify-content-between flex-wrap">
+                                <div>received</div>
+                                <div class="chatclock d-flex flex-column justify-content-end">16.15</div>
                             </div>
                         </div>
                     </div>
-                    <div class="toolbar">
-                        a
+                    <div class="toolbar d-flex justify-content-between align-items-center">
+                        <div class="p-4">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="flex-fill">
+                            <input type="text" class="form-control" id="messagebox" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="p-4">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
             </div>
