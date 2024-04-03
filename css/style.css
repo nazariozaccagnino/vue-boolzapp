@@ -29,8 +29,9 @@
     border-radius: 50%;
     width: 10%;
 }
-i{
-    padding: 5px;
+.top-contact i{
+    padding: 10px;
+    font-size: 1.3rem;
 }
 .notifications{
     background-color: #8EDAFC;
