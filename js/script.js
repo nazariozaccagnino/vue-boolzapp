@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             contacts: contacts,
+            activeContactId: 2,
         }
     },
     methods:{
