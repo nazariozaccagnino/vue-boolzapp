@@ -1,0 +1,48 @@
+#app{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #009688 20%, #d8dbd5 20%) ;
+}
+.debug{
+    border: 1px solid red;
+}
+.wrapper{
+    background-color: white;
+    height: calc(100vh - 4rem);
+}
+.left{
+    height: 100%;
+    width: 40%;   
+    
+}
+.right{
+    width: 60%;
+    background-color: bisque;
+    height: 100%;
+}
+.top-contact{
+    height: 50px;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+.top-contact img{
+    border-radius: 50%;
+    width: 10%;
+}
+i{
+    padding: 5px;
+}
+.notifications{
+    background-color: #8EDAFC;
+    height: 60px;
+}
+.notifications i{
+    color: #8EDAFC;    
+}
+.searchbar{
+    
+}
+.user img{
+    width: 10%;
+    border-radius: 50%;
+}
