@@ -51,7 +51,7 @@
                             placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="conversations">
-                        <div class="user d-flex justify-content-between py-2 border-top border-bottom" :class="{'activechat': activeContactId === item.id}" v-for="(item, id) in contacts">
+                        <div class="user d-flex justify-content-between py-2 border-top border-bottom" :class="{'activechat': activeContactId === item.id}" v-for="(item, id) in contacts" @click="setActiveChat(id)">
                             <div class="d-flex">
                                 <img :src="item.avatar" :alt="item.name">
                                 <div>
