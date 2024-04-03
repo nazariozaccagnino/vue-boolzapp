@@ -35,10 +35,12 @@
 }
 .notifications{
     background-color: #8EDAFC;
-    height: 60px;
+    height: 80px;
 }
 .notifications i{
-    color: #8EDAFC;    
+    color: #8EDAFC;
+    font-size: 1.3rem;
+    padding: 5px; 
 }
 .searchbar{
     height:50px;
@@ -49,7 +51,7 @@
 }
 .conversations{
     overflow-y: scroll;
-    height: calc(100% - 160px);
+    height: calc(100% - 180px);
 }
 .toolbar{
     height: 50px;
