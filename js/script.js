@@ -22,7 +22,10 @@ createApp({
                 message: this.messageText,
                 status: 'sent',
             }
-            this.activeContact.messages.push(newMessage)
+            if(this.messageText === ''){
+                return
+            }            
+            this.activeContact.messages.push(newMessage)            
             this.messageText = '';
         
         setTimeout(() => { 
