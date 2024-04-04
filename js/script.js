@@ -10,6 +10,7 @@ createApp({
             activeContactId: 1,
             messageText: '',
             searchText: '',
+            send : false,
         }
     },
     methods:{
@@ -37,8 +38,12 @@ createApp({
             this.activeContact.messages.push(newMessage)
                    
               }, 1000);
-        },
-        
+        },       
+        sendIcon(){
+            if(this.messageText !== ''){
+                this.send = true
+            }                  
+        }
     },
     computed:{
         activeContact(){
@@ -46,9 +51,12 @@ createApp({
         },
         filteredContacts(){
             return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchText.toLowerCase()))
-        }
+        },
+        
     },
     mounted(){
         // console.log(this.contacts);
+        console.log(this.messageText);
+        console.log(this.send);
     }
 }).mount('#app');

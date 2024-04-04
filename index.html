@@ -99,10 +99,11 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="flex-fill">
-                            <input type="text" class="form-control" id="messagebox" placeholder="Scrivi un messaggio" v-model="messageText" @keyup.enter="sendMessage()">
+                            <input type="text" class="form-control" id="messagebox" placeholder="Scrivi un messaggio" v-model="messageText" @keyup.enter="sendMessage()" @keyup="sendIcon">
                         </div>
-                        <div class="p-4">
-                            <i class="fa-solid fa-microphone"></i>
+                        <div class="p-4">                            
+                            <i class="fa-solid fa-location-arrow" v-if="send"></i>
+                            <i class="fa-solid fa-microphone" v-else></i>
                         </div>
                     </div>
                 </div>
