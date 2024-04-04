@@ -65,7 +65,13 @@
 .activechat{
     background-color: lightgray;
 }
-
+.userdate{
+    font-size: 12px;
+}
+.userlastmessage{
+    font-size: 12px;
+    color: grey;
+}
 /* main chat section */
 .toolbar{
     height: 50px;

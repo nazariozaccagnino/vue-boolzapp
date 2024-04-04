@@ -36,8 +36,7 @@ createApp({
                 message: 'ok',
                 status: 'received',
             }
-            this.activeContact.messages.push(newMessage)
-                   
+            this.activeContact.messages.push(newMessage)                   
               }, 1000);
         },       
         
