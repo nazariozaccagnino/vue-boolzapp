@@ -55,7 +55,7 @@
 
 /* chat list section */
 .user img{
-    width: 10%;
+    width: 40px;
     border-radius: 50%;
 }
 .conversations{
@@ -69,7 +69,6 @@
 /* main chat section */
 .toolbar{
     height: 50px;
-    width: 100%;
     background-color: #EAEAEA;
 }
 .chat{
@@ -81,12 +80,15 @@
     min-width: 250px;
     padding: 10px;
     border-radius: 10px;
+    margin-left: auto;
+    
 }
 .received{
     background-color: white;
     min-width: 250px;
     padding: 10px;
     border-radius: 10px;
+    margin-right: auto;
 }
 .chatclock{
     font-size: 10px;
