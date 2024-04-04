@@ -11,6 +11,7 @@ createApp({
             messageText: '',
             searchText: '',
             send : false,
+            messages : '',
         }
     },
     methods:{
@@ -55,11 +56,9 @@ createApp({
             setInterval(function(){
                 this.send = false;
             }, 1000)
-        }
+        },
     },
     mounted(){
-        // console.log(this.contacts);
-        console.log(this.messageText);
-        console.log(this.send);
+        console.log(this.lastMessage);
     }
 }).mount('#app');

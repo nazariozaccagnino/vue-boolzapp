@@ -60,11 +60,11 @@
                                     <div>
                                         <h6>{{item.name}}</h6>
                                     </div>
-                                    <div>Ultimo messaggio inviato</div>
+                                    <div>{{item.messages[item.messages.length - 1].message}}</div>
                                 </div>
                             </div>
                             <div>
-                                aaa
+                                {{item.messages[item.messages.length - 1].date}}
                             </div>
                         </div>
                     </div>
