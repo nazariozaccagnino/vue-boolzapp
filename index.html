@@ -88,7 +88,7 @@
                     </div>
                     <div class="chat">
                         <div class="p-3 d-flex" v-for="(message, id) in activeContact.messages">
-                            <div class="d-flex justify-content-between flex-wrap debug " :class="message.status">
+                            <div class="d-flex justify-content-between flex-wrap" :class="message.status">
                                 <!--  -->
                                 <div>{{message.message}}</div>
                                 <div class="chatclock d-flex flex-column justify-content-end">{{message.date}}</div>

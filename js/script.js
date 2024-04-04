@@ -24,7 +24,18 @@ createApp({
             }
             this.activeContact.messages.push(newMessage)
             this.messageText = '';
+        
+        setTimeout(() => { 
+            const newMessage = {
+                date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
+                message: 'ok',
+                status: 'received',
+            }
+            this.activeContact.messages.push(newMessage)
+                   
+              }, 1000);
         },
+        
     },
     computed:{
         activeContact(){
