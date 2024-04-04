@@ -20,7 +20,7 @@
 <body>
     <div id="app" class="p-4">
         <div class="container">
-            <div class="wrapper d-flex">
+            <div class="wrapper d-flex" :class="{'fs-3': fontSize}">
                 <div class="left">
                     <div class="top-contact d-flex align-items-center justify-content-between p-2">
                         <div class="d-flex align-items-center">
@@ -29,7 +29,8 @@
                             </div>
                             <div>Nazario</div>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex">                            
+                            <i class="fa-solid fa-plus" @click="switchSize()"></i>
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>

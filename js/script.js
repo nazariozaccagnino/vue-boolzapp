@@ -12,6 +12,7 @@ createApp({
             searchText: '',
             send : false,
             messages : '',
+            fontSize: false,
         }
     },
     methods:{
@@ -38,7 +39,10 @@ createApp({
             }
             this.activeContact.messages.push(newMessage)                   
               }, 1000);
-        },       
+        }, 
+        switchSize(){
+            this.fontSize = !this.fontSize;
+        },  
         
     },
     computed:{
