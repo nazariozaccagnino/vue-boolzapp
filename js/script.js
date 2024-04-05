@@ -10,7 +10,6 @@ createApp({
             activeContactId: 1,
             messageText: '',
             searchText: '',
-            send : false,
             messages : '',
             fontSize: false,
         }
@@ -51,14 +50,6 @@ createApp({
         },
         filteredContacts(){
             return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchText.toLowerCase()))
-        },
-        sendIcon(){
-            if(this.messageText !== ''){
-                this.send = true
-            }
-            setInterval(function(){
-                this.send = false;
-            }, 1000)
         },
     },
     mounted(){
