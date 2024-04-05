@@ -14,11 +14,13 @@ createApp({
             messages : '',
             fontSize: false,
             showEmoji: false,
+            activeMessageIndex: null,
         }
     },
     methods:{
         setActiveChat(id){
             this.activeContactId = id
+            this.activeMessageIndex = null
         },
         sendMessage(){
             const newMessage = {
@@ -59,6 +61,15 @@ createApp({
               }
               */
         },
+        toggleDropdown(index){
+            // if (this.activeMessageIndex = index){
+            //     return activeMessageIndex = null
+            // } else{
+            //     return this.activeMessageIndex = index
+            // }
+            
+            this.activeMessageIndex = this.activeMessageIndex === index ? null : index
+        },
     },
     computed:{
         activeContact(){
@@ -67,6 +78,10 @@ createApp({
         filteredContacts(){
             return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchText.toLowerCase()))
         },
+        lastAccess(){
+            const index = this.activeContact.messages.length - 1
+            return this.activeContact.messages[index].date;
+        }
     },
     mounted(){
         console.log(this.lastMessage);
