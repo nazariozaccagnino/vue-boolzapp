@@ -69,12 +69,12 @@
                                         <h6>{{item.name}}</h6>
                                     </div>
                                     <div class="userlastmessage">
-                                        {{item.messages[item.messages.length - 1].message}}
+                                        {{getLastMessage(item.id)}}
                                     </div>
                                 </div>
                             </div>
                             <div class="userdate">
-                                {{item.messages[item.messages.length - 1].date}}
+                                {{getLastMessageDate(item.id)}}
                             </div>
                         </div>
                     </div>

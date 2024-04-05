@@ -70,6 +70,16 @@ createApp({
             
             this.activeMessageIndex = this.activeMessageIndex === index ? null : index
         },
+        getLastMessage(id){
+            const index = this.contacts.findIndex((el)=> el.id === id);
+            const lastIndex = this.contacts[index].messages.length -1;
+            return this.contacts[index].messages[lastIndex].message
+        },
+        getLastMessageDate(id){
+            const index = this.contacts.findIndex((el)=> el.id === id);
+            const lastIndex = this.contacts[index].messages.length -1;
+            return this.contacts[index].messages[lastIndex].date
+        },
     },
     computed:{
         activeContact(){
