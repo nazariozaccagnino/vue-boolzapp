@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/script.js" type="module"></script>
 
+    <script src="./js/emoji-picker.js" type="module"></script>
+    <link rel="stylesheet" href="./js/style.css">
+
     <title>Boolzapp</title>
 </head>
 
@@ -103,13 +106,14 @@
                     </div>
                     <div class="toolbar d-flex justify-content-between align-items-center">
                         <div class="p-4">
-                            <i class="fa-regular fa-face-smile"></i>
+                            <i class="fa-regular fa-face-smile" class="emojiicon" @click="showEmoji = !showEmoji"></i>
+                            <Picker @select="onSelectEmoji" class="emojicard" :class="{'d-none': !showEmoji}" />
                         </div>
                         <div class="flex-fill">
                             <input type="text" class="form-control" id="messagebox" placeholder="Scrivi un messaggio" v-model="messageText" @keyup.enter="sendMessage()" @keyup="sendIcon">
                         </div>
                         <div class="p-4">                            
-                            <i class="fa-solid fa-location-arrow" v-if="messageText " @click="sendMessage()"></i>
+                            <i class="fa-solid fa-location-arrow" v-if="messageText" @click="sendMessage()"></i>
                             <i class="fa-solid fa-microphone" v-else></i>
                         </div>
                     </div>

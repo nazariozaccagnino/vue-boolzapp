@@ -1,4 +1,5 @@
 import { contacts } from "./data.js";
+import Picker from './emoji-picker.js';
 
 const dt = luxon.DateTime
 const {createApp} = Vue;
@@ -12,6 +13,7 @@ createApp({
             searchText: '',
             messages : '',
             fontSize: false,
+            showEmoji: false,
         }
     },
     methods:{
@@ -29,6 +31,7 @@ createApp({
             }            
             this.activeContact.messages.push(newMessage)            
             this.messageText = '';
+            this.showEmoji = false;
         
         setTimeout(() => { 
             const newMessage = {
@@ -42,7 +45,20 @@ createApp({
         switchSize(){
             this.fontSize = !this.fontSize;
         },  
-        
+        onSelectEmoji(emoji) {
+            console.log(emoji)
+            this.messageText += emoji.i;
+            /*
+              // result
+              { 
+                  i: "😚", 
+                  n: ["kissing face"], 
+                  r: "1f61a", // with skin tone
+                  t: "neutral", // skin tone
+                  u: "1f61a" // without tone
+              }
+              */
+        },
     },
     computed:{
         activeContact(){
@@ -55,4 +71,4 @@ createApp({
     mounted(){
         console.log(this.lastMessage);
     }
-}).mount('#app');
+}).component('Picker', Picker).mount('#app');

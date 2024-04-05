@@ -106,3 +106,11 @@
 .lastaccess{
     font-size: 0.8rem;
 }
+/* text bar and emoji section */
+.emojiicon{
+    position: relative;
+}
+.emojicard{
+    position: absolute;
+    bottom: 90px;
+}
